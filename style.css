@@ -1,67 +1,89 @@
 @import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
 
-body{
-    margin:0;
+body {
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 125vh;
+    min-height: 100vh;
     background-color: #313030;
+    padding: 1rem;
 }
 
-#calculator{
-    font-family: sono;
+#calculator {
+    font-family: 'Sono', sans-serif;
     background-color: #1c1c1c;
     border-radius: 15px;
+    width: 100%;
     max-width: 500px;
-    width: 90%;
     overflow: hidden;
     box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.5);
 }
-#display{
-    width:100%;
-    padding: 20px;
-    font-size: 6rem;
-    text-align: left;
+
+#display {
+    width: 100%;
+    padding: 5%;
+    font-size: clamp(2rem, 10vw, 6rem);
+    text-align: right;
     border: none;
-    background-color:#8c8c8c;
+    background-color: #8c8c8c;
     color: #1C1C1C;
+    box-sizing: border-box;
 }
 
-
-#keys{
-    display:grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 10px;
-    padding: 25px;
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3vmin;
+    padding: 5%;
 }
-button{
+
+button {
     width: 100%;
     aspect-ratio: 1;
-    height: 100px;
     border-radius: 50%;
-    border:none; 
+    border: none; 
     background-color: #505050;
     color: #D4D4D2;
-    font-size: 3rem; 
-    font-weight:700;
+    font-size: clamp(1rem, 5vw, 3rem);
+    font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
-button:hover{
+
+button:hover {
     background-color: #6e6d6d;
 }
 
-button:active{
+button:active {
     background-color: #f2f2f2;
+    color: #1c1c1c;
 }
 
-.operator_btn{
+.operator_btn {
     background-color: #FF9500;
 }
-.operator_btn:hover{
+
+.operator_btn:hover {
     background-color: #fabb62;
 }
-.operator_btn:active{
+
+.operator_btn:active {
     background-color: #fad39c;
+    color: #1c1c1c;
 }
 
+@media (max-width: 480px) {
+    #keys {
+        gap: 4vmin;
+        padding: 4%;
+    }
+
+    button {
+        font-size: clamp(1.5rem, 7vw, 4rem);
+    }
+
+    #display {
+        font-size: clamp(2.5rem, 12vw, 7rem);
+    }
+}
