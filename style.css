@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@200..800&display=swap');
+
+body{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125vh;
+}
+
+#calculator{
+    font-family: sono;
+    background-color: #1c1c1c;
+    border-radius: 15px;
+    max-width: 500px;
+    overflow: hidden;
+}
+#display{
+    width:100%;
+    padding: 20px;
+    font-size:5rem;
+    text-align: left;
+    border: none;
+    background-color:#8c8c8c;
+    color: #1C1C1C;
+}
+
+
+#keys{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    padding: 25px;
+}
+button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    border:none; 
+    background-color: #505050;
+    color: #D4D4D2;
+    font-size: 3rem; 
+    font-weight:700;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #6e6d6d;
+}
+
+button:active{
+    background-color: #f2f2f2;
+}
+
+.operator_btn{
+    background-color: #FF9500;
+}
+.operator_btn:hover{
+    background-color: #fabb62;
+}
+.operator_btn:active{
+    background-color: #fad39c;
+}
