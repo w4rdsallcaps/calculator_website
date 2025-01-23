@@ -1,6 +1,3 @@
-
-// 
-
 const display = document.getElementById("display");
 let isResultDisplayed = false;
 
