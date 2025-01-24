@@ -4,7 +4,7 @@ let isResultDisplayed = false;
 function appendToDisplay(input){
     if (isResultDisplayed || display.value === "error") {
         display.value="";
-        isResultDisplayed = false;
+        isResultDisplayed = false; // reset the flag to false 
     }
     display.value += input;
 }
@@ -26,6 +26,5 @@ function calculate(){
 }
 
 function backspace(input){
-    temp = 1
     display.value = display.value.slice(0,-1); 
 }
